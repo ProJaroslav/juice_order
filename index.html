@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<body>
+
+    <header id="home">
+        <div class="container">
+            <div class="hamburger-menu">
+                <i class="fas fa-bars toggle"></i>
+                <i class="fas fa-times toggle"></i>
+            </div>
+            <nav class="d-flex align-items-center justify-content-center justify-content-lg-between">
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-fluid" src="images/logo.png" alt="">
+                </a>
+                <ul class="nav-list text-center p-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">CREATE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">CHOOSE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mt-1" href="#home"><i class="fas fa-cart-plus"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hero-text w-100 px-2 px-sm-0">
+                <h1 class="display-4">Best Juices in Town</h1>
+                <p class="lead mb-4">I want to...</p>
+                <a class="btn px-5 mr-2" href="#">Create my own juice</a>
+                <a class="btn px-5 ml-2" href="#">Choose from presets</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="create" id="create">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 text-md-center">
+                        <div class="row text-center">
+                            <div class="col-6 col-sm-12">
+                                <select name="tastes1" id="tastes1">
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <select name="tastes2" id="tastes2">
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <select name="fruits" id="fruits">
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-12">
+                                <select name="spices" id="spices">
+                                </select>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="col-sm-6 text-center" id="generatedImage">
+                        <img class="img-fluid generatedImage" src="" alt="">
+                        <div class="add">
+                            <a class="btn mt-4 mb-5 mb-md-0" href="javascript:void();" id="btn-add">+</a>
+                            <div class="order-list">
+                                <div class="price-tag">Price: </div>
+                            </div>    
+                        </div>                  
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn px-5" href="#">ORDER</a>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <section class="presets" id="presets">
+            <div class="container ">
+                <div class="presets-h1 text-center mb-3">
+                    <h1>CHOOSE FROM OUR PREDEFINED OPTIONS</h1>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-4 text-center preset">
+                        <p>asdasd</p>
+                    </div>
+                    <div class="col-sm-4 text-center preset">
+                        <p>dsadasd</p>
+                    </div>
+                    <div class="col-sm-4 text-center preset">
+                        <p>sdasd</p>
+                    </div>
+                </div>
+            </div>           
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row align-items-lg-center">
+                    <div class="col-12 col-md-6 text-center text-md-left">
+                        <div class="section-heading mb-3">
+                            <h1 class="display-4">Our Story</h1>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus nemo incidunt quos dolore vitae, commodi ratione inventore dolorum iusto. Facilis itaque sed dolor natus, nesciunt soluta culpa veniam ea.</p>
+                        <a class="btn mt-4 mb-5 mb-md-0" href="#">Find out more</a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img class="img-fluid" src="images/about-bg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row about-image-section p-0">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="/images/about-bg.jpg" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="/images/about-bg.jpg" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="/images/about-bg.jpg" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="/images/about-bg.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+         </section>      
+    </main>
+    
+    
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://kit.fontawesome.com/ba33ab971e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js" type="text/javascript"></script>
+</body>
+</html>
