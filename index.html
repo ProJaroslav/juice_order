@@ -6,32 +6,31 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 
-    <header id="home">
+    <header class="home" id="paralax" >
         <div class="container">
             <div class="hamburger-menu">
                 <i class="fas fa-bars toggle"></i>
                 <i class="fas fa-times toggle"></i>
             </div>
-            <nav class="d-flex align-items-center justify-content-center justify-content-lg-between">
+            <nav class="d-flex align-items-center justify-content-center justify-content-lg-between" >
                 <a class="navbar-brand" href="index.html">
                     <img class="img-fluid" src="images/logo.png" alt="">
                 </a>
                 <ul class="nav-list text-center p-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">CREATE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">CHOOSE</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#home">ABOUT US</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#home">SUPPORT</a>
+                    </li>
+                    <li class="nav-item cart-item">
                         <a class="nav-link mt-1" href="#home"><i class="fas fa-cart-plus"></i></a>
+                        <p class="item-amount"></p>
                     </li>
                 </ul>
             </nav>
@@ -49,8 +48,8 @@
         <section class="create" id="create">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-6 text-md-center">
-                        <div class="row text-center">
+                    <div class="col-12 col-sm-5 text-md-center">
+                        <div class="row text-center create-options">
                             <div class="col-6 col-sm-12">
                                 <select name="tastes1" id="tastes1">
                                 </select>
@@ -69,7 +68,7 @@
                             </div>
                         </div>
                     </div>            
-                    <div class="col-sm-6 text-center" id="generatedImage">
+                    <div class="col-sm-4 text-center" id="generatedImage">
                         <img class="img-fluid generatedImage" src="" alt="">
                         <div class="add">
                             <a class="btn mt-4 mb-5 mb-md-0" href="javascript:void();" id="btn-add">+</a>
@@ -79,7 +78,7 @@
                         </div>                  
                     </div>
                     <div class="col-12 text-center">
-                        <a class="btn px-5" href="#">ORDER</a>
+                        <a class="btn px-5 btn-order" href="#">ORDER</a>
                     </div>
                 </div>
             </div>    
@@ -90,15 +89,24 @@
                 <div class="presets-h1 text-center mb-3">
                     <h1>CHOOSE FROM OUR PREDEFINED OPTIONS</h1>
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-sm-4 text-center preset">
-                        <p>asdasd</p>
+                <div class="row d-flex justify-content-center preset-container">
+                    <div class="col-sm-4 text-center preset" data-aos="fade-right">
+                        <h1></h1>
+                        <img src="" alt="">
+                        <p>Made by: </p>
+                        <a class="btn mt-4 mb-5 mb-md-0" href="javascript:void();" id="btn-add">+</a>
                     </div>
-                    <div class="col-sm-4 text-center preset">
-                        <p>dsadasd</p>
+                    <div class="col-sm-4 text-center preset" data-aos="fade-up-left">
+                        <h1></h1>
+                        <img src="" alt="">
+                        <p>Made by: </p>
+                        <a class="btn mt-4 mb-5 mb-md-0" href="javascript:void();" id="btn-add">+</a>
                     </div>
-                    <div class="col-sm-4 text-center preset">
-                        <p>sdasd</p>
+                    <div class="col-sm-4 text-center preset" data-aos="fade-left">
+                        <h1></h1>
+                        <img src="" alt="">
+                        <p>Made by: </p>
+                        <a class="btn mt-4 mb-5 mb-md-0" href="javascript:void();" id="btn-add">+</a>
                     </div>
                 </div>
             </div>           
@@ -114,29 +122,47 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus nemo incidunt quos dolore vitae, commodi ratione inventore dolorum iusto. Facilis itaque sed dolor natus, nesciunt soluta culpa veniam ea.</p>
                         <a class="btn mt-4 mb-5 mb-md-0" href="#">Find out more</a>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 img-about" data-aos="flip-left">
                         <img class="img-fluid" src="images/about-bg.jpg" alt="">
                     </div>
                 </div>
                 <div class="row about-image-section p-0">
-                    <div class="col-md-3">
+                    <div class="col-md-3" data-aos="fade-right">
                         <img class="img-fluid" src="/images/about-bg.jpg" alt="">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3" data-aos="fade-right">
                         <img class="img-fluid" src="/images/about-bg.jpg" alt="">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3" data-aos="fade-left">
                         <img class="img-fluid" src="/images/about-bg.jpg" alt="">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3" data-aos="fade-left">
                         <img class="img-fluid" src="/images/about-bg.jpg" alt="">
                     </div>
                 </div>
             </div>
-         </section>      
+         </section>    
+         
+         <section class="footer text-center">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-12 footer-box mt-3">
+                  <p><b>CONTACT US</b></p>
+                  <p> <i class="fa fa-map-marker"></i> SOMEWHERE BLAH BLAH</p>
+                  <p> <i class="fa fa-phone"></i>  +420 000000000</p>
+                  <p> <i class="fa fa-envelope"></i> ASDASDASD@SADASD.IN</p>
+                </div>
+              <hr>
+                <div class="col-md-12 mt-5">
+                    <p class="copyright">CREATED BY</p>
+                    <p class="copyright">Jaroslav Procházka</p>
+                </div>
+            </div>  
+      </section>
     </main>
-    
-    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script src="https://kit.fontawesome.com/ba33ab971e.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 // VARIABLES
 $color1: rgb(182, 85, 46);
 $color2: rgb(155, 64, 29);
-$font: "Hanalei";
-$font2: "Shadows Into Light";
+$font: "Ranchers";
+$font2: "Oswald";
 $bck1: rgb(242, 238, 236);
 $bck2: rgb(238, 164, 134);
 $bck3: rgb(243, 224, 214);
@@ -29,7 +29,7 @@ section {
 }
 
 .container {
-    max-width: 85%;
+    max-width: 75%;
 }
 
 
@@ -38,9 +38,8 @@ header {
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(246, 221, 204, .90), rgba(237, 187, 153, .90)),
-        url("images/header-bg.jpg") center no-repeat;
+        url("images/header-bg.jpg");
     background-size: cover;
-    position: relative;
 }
 
 header>.container {
@@ -154,6 +153,9 @@ header>.container {
     left: 100%;
 }
 
+
+
+
 //CREATE
 .create {
     background: linear-gradient($bck1, $bck3);
@@ -165,7 +167,7 @@ header>.container {
     border: none;
     padding: 20px;
     width: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -188,10 +190,8 @@ header>.container {
     position: relative;
 }
 
-
-
 .order-list {
-    width: 175px;
+    width: 250px;
     height: 250px;
     background-color: $bck2;
     color: $bck1;
@@ -214,13 +214,61 @@ header>.container {
     transform: translateX(-50%)
 }
 
+.juice-image {
+    max-height: 10%;
+    max-width: 10%;
+    margin-top: 5px;
+    position: absolute;
+    left: 25px;
+
+}
+
+.count-tag {
+    font-size: 15px !important;
+    color: white !important;
+    margin-left: 5px;
+}
+
+.cart-item {
+    position: relative;
+}
+
+.item-amount {
+    color: $color2;
+    background-color: $bck2;
+    width: 20px;
+    height: 20px;
+    font-size: 13px !important;
+    border-radius: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: -9px;
+    left: 28px;
+    font-family: $font2;
+}
+
+.btn-order {
+    margin-top: 25px;
+}
+
+.create-options div {
+    margin-bottom: 7px;
+}
+
 
 //PRESETS
-
 .presets {
     background: linear-gradient(rgba(237, 187, 153, .90), rgba(246, 221, 204, .90));
     font-family: $font;
     color: $color2;
+}
+
+.presets h1 {
+    margin-bottom: 50px;
+}
+
+.preset h1 {
+    margin: 0 !important;
 }
 
 .preset {
@@ -240,6 +288,16 @@ header>.container {
     opacity: 1;
 }
 
+.preset img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#generatedImage {
+    bottom: 10px;
+}
+
+
 //ABOUT
 .about {
     background: linear-gradient($bck1, $bck3);
@@ -254,6 +312,51 @@ header>.container {
     margin-top: 10px;
 }
 
+.about h1 {
+    font-family: $font2 !important;
+    color: $color2;
+}
+
+.img-about {
+    filter: blur(1px);
+    transition-duration: 0.7s;
+}
+
+.img-about:hover {
+    filter: blur(0px);
+
+}
+
+
+//FOOTER
+.footer {
+    color: white;
+    background-image: linear-gradient(rgba(237, 187, 153, .90), rgba(246, 221, 204, .90));
+}
+
+// .footer-box .fa {
+//     margin-right: 8px;
+//     font-size: 25px;
+//     height: 40px;
+//     width: 40px;
+
+// }
+
+// .footer-box {
+//     text-align: center;
+//     display: flex;
+
+// }
+
+hr {
+    background-color: white;
+}
+
+.copyright {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
 
 
 
@@ -375,5 +478,9 @@ header>.container {
     .menu-item-description .btn {
         color: $bck1;
         background-color: $font;
+    }
+
+    #generatedImage {
+        right: 75px;
     }
 }
