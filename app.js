@@ -29,8 +29,6 @@ $(function () {
 
 
 
-// let cart = [];
-// let itemsCreated = [];
 
 //CLASSES and objects
 class Juice {
@@ -68,12 +66,11 @@ class Preset {
 let finishedJuices = {
     appleJuice: new Juice("Apple Juice", 60, "images/custom_apple_apple.png", 0, false, "apple-juice"),
     orangeJuice: new Juice("Orange Juice", 60, "images/custom_orange_orange.png", 0, false, "orange-juice"),
-    raspberryJuice: new Juice("Raspberry Juice", 60, "images/custom_raspberry_raspberry.pngg", 0, false, "raspberry-juice"),
-    orangerasberyJuice: new Juice("Orange Raspberry Juice", 60, "images/custom_orange_raspberry.png", 0, false, "orangeRaspberry-juice"),
+    raspberryJuice: new Juice("Raspberry Juice", 60, "images/custom_raspberry_raspberry.png", 0, false, "raspberry-juice"),
+    orangeraspberryJuice: new Juice("Orange Raspberry Juice", 60, "images/custom_orange_raspberry.png", 0, false, "orangeRaspberry-juice"),
     orangeappleJuice: new Juice("Orange Apple Juice", 60, "images/custom_orange_apple.png", 0, false, "orangeApple-juice"),
     appleraspberryJuice: new Juice("Apple Raspberry Juice", 60, "images/custom_raspberry_apple.png", 0, false, "appleraspberry-juice"),
     
-
 }
 
 let presets = {
@@ -102,10 +99,8 @@ function makeCartList() {
 //WINDOW
 window.addEventListener("scroll", function(){
     let offset = window.pageYOffset;
-    console.log(paralax)
     paralax.style.backgroundPositionY = offset * 0.7 + "px";
 })
-
 
 
 
@@ -158,8 +153,15 @@ function generateJuice() {
     generatedJuice.src=finishedJuices[(juiceSelector1.value + "Juice")].image
 }
     if(juiceSelector1.value !== juiceSelector2.value) {
-        generatedJuice.src=finishedJuices[(juiceSelector1.value + juiceSelector2.value + "Juice")].image
-        generatedJuice.src=finishedJuices[(juiceSelector2.value + juiceSelector1.value + "Juice")].image
+        try {
+            generatedJuice.src=finishedJuices[(juiceSelector1.value + juiceSelector2.value + "Juice")].image
+          }
+          catch(err) {
+            generatedJuice.src=finishedJuices[(juiceSelector2.value + juiceSelector1.value + "Juice")].image
+            console.log(finishedJuices[(juiceSelector2.value + juiceSelector1.value + "Juice")])
+          }
+        
+        
     }
 }
 
@@ -217,17 +219,9 @@ function generateCartIcon() {
     })
 }
 
-
-
-
-//PRESETS
-// console.log(presetContainer.children)
-// presetContainer.children[1][0].innerHTML = "sdsdasdasdasdasd"
-
 function loadPreset() {
     for (let i = 0; i < 3; i++  ) {
         let itemKey = Object.keys(presets)[i]
-        console.log(itemKey)
         //pristup k elementum v divu
         presetContainer.children[i].children[0].innerHTML = presets[itemKey].name
         presetContainer.children[i].children[1].src = presets[itemKey].image

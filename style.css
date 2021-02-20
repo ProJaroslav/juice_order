@@ -188,8 +188,8 @@ header > .container {
 }
 
 .order-list {
-  width: 250px;
-  height: 250px;
+  width: 120px;
+  height: 120px;
   background-color: #eea486;
   color: #f2eeec;
   top: 80px;
@@ -355,15 +355,16 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .btn {
-    width: 150px;
-  }
   .menu-item-desc {
     padding: 50px 20px;
   }
 }
 
 @media (min-width: 992px) {
+  .order-list {
+    width: 250px;
+    height: 250px;
+  }
   header > .container {
     padding: 0 15px;
   }

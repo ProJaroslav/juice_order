@@ -191,8 +191,8 @@ header>.container {
 }
 
 .order-list {
-    width: 250px;
-    height: 250px;
+    width: 120px;
+    height: 120px;
     background-color: $bck2;
     color: $bck1;
     top: 80px;
@@ -334,20 +334,6 @@ header>.container {
     background-image: linear-gradient(rgba(237, 187, 153, .90), rgba(246, 221, 204, .90));
 }
 
-// .footer-box .fa {
-//     margin-right: 8px;
-//     font-size: 25px;
-//     height: 40px;
-//     width: 40px;
-
-// }
-
-// .footer-box {
-//     text-align: center;
-//     display: flex;
-
-// }
-
 hr {
     background-color: white;
 }
@@ -382,16 +368,17 @@ hr {
 }
 
 @media (min-width: 768px) {
-    .btn {
-        width: 150px;
-    }
-
     .menu-item-desc {
         padding: 50px 20px;
     }
 }
 
 @media (min-width: 992px) {
+    .order-list {
+        width: 250px;
+        height: 250px;
+    }
+
     header>.container {
         padding: 0 15px;
     }
