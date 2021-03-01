@@ -23,8 +23,7 @@ section {
 header {
   width: 100%;
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(246, 221, 204, 0.9)), to(rgba(237, 187, 153, 0.9))), url("images/header-bg.jpg");
-  background: linear-gradient(rgba(246, 221, 204, 0.9), rgba(237, 187, 153, 0.9)), url("images/header-bg.jpg");
+  background: linear-gradient(rgba(246, 221, 204, 0.9), rgba(237, 187, 153, 0.9)), url("/public/images/header-bg.jpg");
   background-size: cover;
 }
 
@@ -40,9 +39,7 @@ header > .container {
   max-width: 100px;
   top: 10px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  -webkit-transition: opacity 650ms;
+  transform: translateX(-50%);
   transition: opacity 650ms;
 }
 
@@ -52,8 +49,6 @@ header > .container {
   right: 15px;
   width: 50px;
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 4px;
   cursor: pointer;
@@ -88,36 +83,25 @@ header > .container {
   background-color: #edbb99;
   font-family: "Ranchers" !important;
   z-index: 900;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: opacity 650ms;
+  transform: scale(0);
   transition: opacity 650ms;
   font-size: 25px;
 }
 
 .nav-list.open {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .hero-text {
   position: absolute;
   top: 45%;
   left: 50%;
-  -webkit-transform: translate(-50%, -45%);
-          transform: translate(-50%, -45%);
+  transform: translate(-50%, -45%);
   text-align: center;
 }
 
@@ -145,7 +129,6 @@ header > .container {
   width: 100%;
   height: 100%;
   background: linear-gradient(120deg, transparent, rgba(245, 181, 138, 0.3), transparent);
-  -webkit-transition: all 650ms;
   transition: all 650ms;
 }
 
@@ -154,8 +137,13 @@ header > .container {
 }
 
 .create {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f2eeec), to(#f3e0d6));
   background: linear-gradient(#f2eeec, #f3e0d6);
+}
+
+.create-options {
+  margin-bottom: 7px;
+  line-height: 50px;
+  margin-top: 80px;
 }
 
 .create select {
@@ -164,7 +152,7 @@ header > .container {
   border: none;
   padding: 20px;
   width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -199,15 +187,13 @@ header > .container {
   z-index: 999;
   opacity: 0;
   border-radius: 15px;
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s;
+  transition-duration: 0.7s;
 }
 
 .price-tag {
   position: absolute;
   left: 50%;
   bottom: 0px;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -247,12 +233,7 @@ header > .container {
   margin-top: 25px;
 }
 
-.create-options div {
-  margin-bottom: 7px;
-}
-
 .presets {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 187, 153, 0.9)), to(rgba(246, 221, 204, 0.9)));
   background: linear-gradient(rgba(237, 187, 153, 0.9), rgba(246, 221, 204, 0.9));
   font-family: "Ranchers";
   color: #9b401d;
@@ -275,8 +256,7 @@ header > .container {
   margin-right: 50px;
   border-radius: 50px;
   opacity: 0.5;
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s;
+  transition-duration: 0.7s;
   margin-bottom: 15px;
 }
 
@@ -294,7 +274,6 @@ header > .container {
 }
 
 .about {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f2eeec), to(#f3e0d6));
   background: linear-gradient(#f2eeec, #f3e0d6);
 }
 
@@ -313,20 +292,16 @@ header > .container {
 }
 
 .img-about {
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s;
+  filter: blur(1px);
+  transition-duration: 0.7s;
 }
 
 .img-about:hover {
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
+  filter: blur(0px);
 }
 
 .footer {
   color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 187, 153, 0.9)), to(rgba(246, 221, 204, 0.9)));
   background-image: linear-gradient(rgba(237, 187, 153, 0.9), rgba(246, 221, 204, 0.9));
 }
 
@@ -373,22 +348,16 @@ hr {
   }
   .navbar-brand {
     position: initial;
-    -webkit-transform: initial;
-            transform: initial;
+    transform: initial;
   }
   .nav-list {
     position: initial;
     width: initial;
     height: initial;
     background-color: initial;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     opacity: initial;
-    -webkit-transform: initial;
-            transform: initial;
-    -webkit-transition: initial;
+    transform: initial;
     transition: initial;
     margin: 0;
     padding: 0;
@@ -411,18 +380,12 @@ hr {
     background-color: "Ranchers";
     width: 100%;
     height: 2px;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-    -webkit-transition: -webkit-transform 650ms;
-    transition: -webkit-transform 650ms;
+    transform: scaleX(0);
+    transform-origin: left;
     transition: transform 650ms;
-    transition: transform 650ms, -webkit-transform 650ms;
   }
   .nav-link:hover::before {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 
@@ -432,8 +395,7 @@ hr {
     display: block;
     top: 50%;
     left: initial;
-    -webkit-transform: translate(0, -50%) rotate(45deg);
-            transform: translate(0, -50%) rotate(45deg);
+    transform: translate(0, -50%) rotate(45deg);
   }
   .point-left::before {
     left: -12px;

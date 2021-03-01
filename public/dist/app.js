@@ -1,12 +1,10 @@
-//VARIABLES AND LISTS---------------------------------------------------------------
+//VARIABLES, LISTS, OBJECTS---------------------------------------------------------------
 const hamburgerBTN = document.querySelector(".fa-bars");
 const  toggleBTN = document.querySelector(".fa-times");
 const navList = document.querySelector(".nav-list");
 const paralax = document.getElementById("paralax")
 const juiceSelector1 = document.querySelector("#tastes1");
 const juiceSelector2 = document.querySelector("#tastes2");
-const fruitSelector = document.querySelector("#fruits");
-const spiceSelector = document.querySelector("#spices");
 const generatedJuice = document.querySelector(".generatedImage");
 const addBtn = document.querySelector("#btn-add");
 const orderList = document.querySelector(".order-list");
@@ -14,21 +12,17 @@ let priceTag = document.querySelector(".price-tag");
 let cartAmount = document.querySelector(".item-amount")
 const presetContainer = document.querySelector(".preset-container")
 
-
+//juice options
 let juiceOptions1 = ["orange", "apple", "raspberry"];
 let juiceOptions2 = ["orange", "apple", "raspberry"];
-let fruitOptions = ["Kiwi", "Lemon"];
-let spiceOptions = ["Cinnamon", "Vannila"];
 
+//animations function
 $(function () {
     AOS.init({
             easing: "ease",
             duration: 1000,
         });
 });
-
-
-
 
 //CLASSES and objects
 class Juice {
@@ -60,23 +54,19 @@ class Preset {
     }
 }
 
-
-
-
 let finishedJuices = {
-    appleJuice: new Juice("Apple Juice", 60, "images/custom_apple_apple.png", 0, false, "apple-juice"),
-    orangeJuice: new Juice("Orange Juice", 60, "images/custom_orange_orange.png", 0, false, "orange-juice"),
-    raspberryJuice: new Juice("Raspberry Juice", 60, "images/custom_raspberry_raspberry.png", 0, false, "raspberry-juice"),
-    orangeraspberryJuice: new Juice("Orange Raspberry Juice", 60, "images/custom_orange_raspberry.png", 0, false, "orangeRaspberry-juice"),
-    orangeappleJuice: new Juice("Orange Apple Juice", 60, "images/custom_orange_apple.png", 0, false, "orangeApple-juice"),
-    appleraspberryJuice: new Juice("Apple Raspberry Juice", 60, "images/custom_raspberry_apple.png", 0, false, "appleraspberry-juice"),
-    
+    appleJuice: new Juice("Apple Juice", 60, "/public/images/custom_apple_apple.png", 0, false, "apple-juice"),
+    orangeJuice: new Juice("Orange Juice", 60, "/public/images/custom_orange_orange.png", 0, false, "orange-juice"),
+    raspberryJuice: new Juice("Raspberry Juice", 60, "/public/images/custom_raspberry_raspberry.png", 0, false, "raspberry-juice"),
+    orangeraspberryJuice: new Juice("Orange Raspberry Juice", 60, "/public/images/custom_orange_raspberry.png", 0, false, "orangeRaspberry-juice"),
+    orangeappleJuice: new Juice("Orange Apple Juice", 60, "/public/images/custom_orange_apple.png", 0, false, "orangeApple-juice"),
+    appleraspberryJuice: new Juice("Apple Raspberry Juice", 60, "/public/images/custom_raspberry_apple.png", 0, false, "appleraspberry-juice"),   
 }
 
 let presets = {
-    tomatoJuice: new Preset("Tomato Special", 120, "images/tomato.png", 0, false, "images/tomato.png", "Jaroslav8"),
-    tomatoJuice2: new Preset("Tomato Special", 120, "images/tomato.png", 0, false, "images/tomato.png", "Jaroslav8"),
-    tomatoJuice3: new Preset("Tomato Special", 120, "images/tomato.png", 0, false, "images/tomato.png", "Jaroslav8")
+    tomatoJuice: new Preset("Tomato Special", 120, "/public/images/tomato.png", 0, false, "/public/images/tomato.png", "Jaroslav8"),
+    tomatoJuice2: new Preset("Tomato Special", 120, "/public/images/tomato.png", 0, false, "/public/images/tomato.png", "Jaroslav8"),
+    tomatoJuice3: new Preset("Tomato Special", 120, "/public/images/tomato.png", 0, false, "/public/images/tomato.png", "Jaroslav8")
 }
 
 let shoppingCart = {
@@ -96,7 +86,10 @@ function makeCartList() {
     }
 }
 
-//WINDOW
+
+
+
+//WINDOW---------------------------------------------------------------
 window.addEventListener("scroll", function(){
     let offset = window.pageYOffset;
     paralax.style.backgroundPositionY = offset * 0.7 + "px";
@@ -159,9 +152,7 @@ function generateJuice() {
           catch(err) {
             generatedJuice.src=finishedJuices[(juiceSelector2.value + juiceSelector1.value + "Juice")].image
             console.log(finishedJuices[(juiceSelector2.value + juiceSelector1.value + "Juice")])
-          }
-        
-        
+          }        
     }
 }
 
@@ -232,14 +223,9 @@ function loadPreset() {
 
 
 
-
-
-
 //SETUP---------------------------------------------------------------
 optionCreator(juiceOptions1, juiceSelector1);
 optionCreator(juiceOptions2, juiceSelector2);
-optionCreator(fruitOptions, fruitSelector);
-optionCreator(spiceOptions, spiceSelector);
 makeCartList();
 generateJuice();
 loadPreset();

@@ -38,7 +38,7 @@ header {
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(246, 221, 204, .90), rgba(237, 187, 153, .90)),
-        url("images/header-bg.jpg");
+        url("/public/images/header-bg.jpg");
     background-size: cover;
 }
 
@@ -159,6 +159,13 @@ header>.container {
 //CREATE
 .create {
     background: linear-gradient($bck1, $bck3);
+
+}
+
+.create-options {
+    margin-bottom: 7px;
+    line-height: 50px;
+    margin-top: 80px;
 }
 
 .create select {
@@ -167,7 +174,7 @@ header>.container {
     border: none;
     padding: 20px;
     width: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -251,9 +258,7 @@ header>.container {
     margin-top: 25px;
 }
 
-.create-options div {
-    margin-bottom: 7px;
-}
+
 
 
 //PRESETS
